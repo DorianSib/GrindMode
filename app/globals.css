@@ -1,0 +1,178 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  /* Fonts */
+  --font-sans: var(--font-space-grotesk), 'Space Grotesk', sans-serif;
+  --font-body: var(--font-exo2), 'Exo 2', sans-serif;
+  --font-display: var(--font-orbitron), 'Orbitron', sans-serif;
+  --font-stat: var(--font-rajdhani), 'Rajdhani', sans-serif;
+  --font-ui: var(--font-chakra), 'Chakra Petch', sans-serif;
+  --font-badge: var(--font-audiowide), 'Audiowide', sans-serif;
+
+  /* Brand palette */
+  --color-purple: #8b3dff;
+  --color-purple-2: #a855f7;
+  --color-purple-dark: #5e2baf;
+  --color-purple-btn: #6e2dff;
+  --color-cyan: #00d9ff;
+  --color-cyan-2: #00e5ff;
+  --color-turquoise: #00afc8;
+
+  /* Backgrounds */
+  --color-bg: #09090b;
+  --color-bg-2: #121318;
+  --color-card: #1a1d24;
+  --color-elevated: #232734;
+  --color-sidebar-bg: #0d0e12;
+
+  /* Text */
+  --color-text: #f5f7fa;
+  --color-text-2: #d7dce3;
+  --color-text-3: #a9b0be;
+  --color-text-disabled: #727a8a;
+
+  /* States */
+  --color-success: #00c896;
+  --color-info: #00d9ff;
+  --color-warning: #fbbf24;
+  --color-error: #ff4d4d;
+  --color-notification: #ff3b8d;
+
+  /* Borders */
+  --color-border-1: #2a2e39;
+  --color-border-2: #373b4a;
+  --color-divider: #1f222b;
+  --color-divider-soft: #15171d;
+
+  /* Chart */
+  --color-chart-1: #00e5ff;
+  --color-chart-2: #8b3dff;
+  --color-chart-3: #00c896;
+
+  /* Semantic mappings for shadcn primitives */
+  --color-background: var(--color-bg);
+  --color-foreground: var(--color-text);
+  --color-primary: var(--color-purple);
+  --color-primary-foreground: var(--color-text);
+  --color-ring: var(--color-purple);
+  --color-border: var(--color-border-1);
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border-1);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background-color: color-mix(in oklab, var(--color-purple) 40%, transparent);
+    color: #fff;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-stat {
+    font-family: var(--font-stat);
+  }
+  .font-ui {
+    font-family: var(--font-ui);
+  }
+  .font-badge {
+    font-family: var(--font-badge);
+  }
+
+  .gradient-brand {
+    background-image: linear-gradient(90deg, #8b3dff, #00d9ff);
+  }
+  .gradient-btn {
+    background-image: linear-gradient(90deg, #6e2dff, #00d9ff);
+  }
+  .gradient-highlight {
+    background-image: linear-gradient(135deg, #a855f7, #5e2baf);
+  }
+  .text-gradient-brand {
+    background-image: linear-gradient(90deg, #8b3dff, #00d9ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .glow-purple {
+    box-shadow: 0 0 30px -6px rgba(139, 61, 255, 0.55);
+  }
+  .glow-cyan {
+    box-shadow: 0 0 30px -6px rgba(0, 217, 255, 0.5);
+  }
+  .glow-mix {
+    box-shadow: 0 0 24px -6px rgba(139, 61, 255, 0.45), 0 0 24px -8px rgba(0, 217, 255, 0.4);
+  }
+
+  .glass {
+    background-color: color-mix(in oklab, #1a1d24 78%, transparent);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @keyframes pulse-glow {
+    0%,
+    100% {
+      box-shadow: 0 0 22px -8px rgba(110, 45, 255, 0.7), 0 0 22px -10px rgba(0, 217, 255, 0.6);
+    }
+    50% {
+      box-shadow: 0 0 34px -4px rgba(110, 45, 255, 0.9), 0 0 34px -6px rgba(0, 217, 255, 0.8);
+    }
+  }
+  .animate-pulse-glow {
+    animation: pulse-glow 2.6s ease-in-out infinite;
+  }
+
+  @keyframes float-slow {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+  .animate-float-slow {
+    animation: float-slow 5s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}
