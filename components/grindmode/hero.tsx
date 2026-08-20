@@ -69,15 +69,6 @@ export function Hero() {
             Organiza tu estudio. Mantén la motivación. Deja que la IA te guíe.
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Link
-              href="#gamificacion"
-              className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-[var(--color-cyan)] px-7 py-3.5 font-ui text-base font-semibold text-[var(--color-cyan)] transition-colors hover:bg-[color-mix(in_oklab,var(--color-cyan)_12%,transparent)]"
-            >
-              <PlayCircle className="h-5 w-5" />
-              Ver Demo
-            </Link>
-          </div>
 
           {/* Stats */}
           <div className="mt-12 grid max-w-lg grid-cols-3 gap-4">
