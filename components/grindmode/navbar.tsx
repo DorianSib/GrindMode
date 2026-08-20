@@ -10,7 +10,7 @@ const LINKS = [
   { label: 'Funciones', href: '#funciones' },
   { label: 'Gamificación', href: '#gamificacion' },
   { label: 'IA', href: '#ia' },
-  { label: 'Dashboard', href: '/dashboard' },
+
 ]
 
 export function Navbar() {
