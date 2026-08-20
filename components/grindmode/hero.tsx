@@ -71,13 +71,6 @@ export function Hero() {
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
-              href="/dashboard"
-              className="group inline-flex items-center justify-center gap-2 rounded-xl gradient-btn px-7 py-3.5 font-ui text-base font-semibold text-white transition-transform hover:scale-[1.02] active:scale-[0.98] animate-pulse-glow"
-            >
-              Comenzar Ahora
-              <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Link>
-            <Link
               href="#gamificacion"
               className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-[var(--color-cyan)] px-7 py-3.5 font-ui text-base font-semibold text-[var(--color-cyan)] transition-colors hover:bg-[color-mix(in_oklab,var(--color-cyan)_12%,transparent)]"
             >
