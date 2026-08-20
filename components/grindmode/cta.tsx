@@ -28,13 +28,15 @@ export function Cta() {
             </p>
 
             <div className="mt-9 flex justify-center">
-              <Link
-                href="/dashboard"
-                className="group inline-flex items-center gap-2 rounded-xl bg-white px-8 py-4 font-ui text-base font-bold text-[var(--color-purple)] shadow-2xl transition-transform hover:scale-[1.03] active:scale-[0.98]"
-              >
-                Crear cuenta gratis
-                <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Link>
+              <a
+  href="https://grindmode1.onrender.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group inline-flex items-center gap-2 rounded-xl bg-white px-8 py-4 font-ui text-base font-bold text-purple-600 transition-all hover:shadow-lg hover:shadow-purple-500/25"
+>
+  Crear cuenta gratis
+  <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+</a>
             </div>
 
             <ul className="mt-9 flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
