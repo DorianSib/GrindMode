@@ -59,14 +59,7 @@ export function Navbar() {
           ))}
         </div>
 
-        <div className="hidden md:block">
-          <Link
-            href="/dashboard"
-            className="inline-flex items-center rounded-xl border-2 border-[var(--color-cyan)] px-5 py-2 font-ui text-sm font-semibold text-[var(--color-cyan)] transition-all hover:bg-[color-mix(in_oklab,var(--color-cyan)_12%,transparent)]"
-          >
-            Acceder
-          </Link>
-        </div>
+       
 
         <button
           type="button"
@@ -92,13 +85,7 @@ export function Navbar() {
                 {l.label}
               </Link>
             ))}
-            <Link
-              href="/dashboard"
-              onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center rounded-xl border-2 border-[var(--color-cyan)] px-5 py-3 font-ui text-sm font-semibold text-[var(--color-cyan)]"
-            >
-              Acceder
-            </Link>
+           
           </div>
         </div>
       )}
